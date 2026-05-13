@@ -8,4 +8,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  sql:
+    init:
+      encoding: UTF-8
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
