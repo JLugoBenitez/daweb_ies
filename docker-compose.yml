@@ -8,10 +8,10 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: adminpassword
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   # ¡Nuevo servicio para la interfaz web!
   pgadmin:
@@ -29,7 +29,7 @@ services:
       - db
 
   app:
-    build: ./backend
+    build: .
     container_name: spring_app
     restart: on-failure
     ports:

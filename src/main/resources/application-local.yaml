@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/daweb_db
+    username: admin
+    password: adminpassword
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

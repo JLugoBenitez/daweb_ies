@@ -1,0 +1,12 @@
+target/
+.git/
+.idea/
+.github/
+docker-compose.yml
+init.sql/
+frontend/
+scratch/
+mvnw
+mvnw.cmd
+.mvn/
+*.md
